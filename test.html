@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+	<script>
+	var content = {
+		title: "Test",
+		questions: ["#1", "#2", "#3"],
+		answers: [["#1", "#2", "#3"],
+		       ["#1", "#2", "#3"],
+		       ["#1", "#2", "#3"]],
+  
+	  makeQuestion : function(title) {
+	    var div = document.createElement('h1');
+	    div.innerHTML = title;
+	    document.body.appendChild(div);
+	    console.log(this.questions[i].length);
+	  },
+	  
+	  r : function () {
+	    var q = this.questions.length;
+	    var answ, ul, li, p, checkBox, textEl;
+	    
+	    for (var i=0; i<q; i++){
+	    	p = document.createElement('p');
+	    	p.innerHTML = this.questions[i];
+	    	document.body.appendChild(p);
+
+	    	ul = document.createElement('ul');
+	    	p.appendChild(ul);
+
+	    	answ = this.answers[i].length;}
+
+	    	for (var j=0; j<answ; j++) {
+	    		console.log(j);
+	    		li = document.createElement('li');
+	    		checkBox = document.createElement('input');
+	    		checkBox.type = "checkbox";
+	    		ul.appendChild(li);
+	    		li.appendChild(checkBox);
+	    		textEl = document.createTextNode(this.answer);
+	    		li.appendChild(textEl);
+	    	}
+	    }
+	}
+}
+
+content.makeQuestion("Test");
+content.answers[0][1];
+content.answers[0][2];
+console.log(content);
+content();
+
+
+	</script>
+</body>
+</html>

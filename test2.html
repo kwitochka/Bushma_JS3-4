@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+
+<script>
+    
+var test = {
+        title: "Тест по програмированию",
+        questions: ["#1", "#2", "#3"],
+        answers: [["#1", "#2", "#3"],
+               ["#1", "#2", "#3"],
+               ["#1", "#2", "#3"]],
+        button: "Проверить мои результаты",
+
+    createHeader: function () {
+        var el = document.createElement('h1');
+        el.innerHTML = this.title;
+        var DOMEl = document.querySelector('body');
+        DOMEl.appendChild(el);
+    },
+
+    for(var i = 0; i < data.categories.length; i++){
+            console.log( data.categories[i].categoryName );
+        for(var j = 0; j < data.categories[i].variant.length; j++) {
+            console.log( data.categories[i].variant[j] );
+        }
+
+    createUl: function () {
+        var el = document.createElement('ol');
+        var DOMEl = document.querySelector('body');
+        DOMEl.appendChild(el);
+    },
+
+    createOl: function (inner, addClass) {
+        var el = document.createElement('li');
+        el.innerHTML = this.questions;
+        el.className = addClass;
+        var DOMEl = document.querySelector('ol');
+        DOMEl.appendChild(el);
+    },
+
+    createAnswer: function (answers, DOM) {
+        var input = document.createElement('input');
+        var DOMEl = document.querySelector(DOM);
+        DOMEl.appendChild(input);
+        input.setAttribute("type", "checkbox");
+        
+        var label = document.createElement('label');
+        label.innerHTML = answers;
+        DOMEl.appendChild(label);
+    },
+
+    createButton: function () {
+        var el = document.createElement('button');
+        el.innerHTML = this.button;
+        var DOMEl = document.querySelector('body');
+        DOMEl.appendChild(el);
+    },
+
+    run: function() {
+        this.createHeader();
+        this.createUl();
+    }
+}
+
+test.run();
+
+// for (var i = 1; i < 4; i++) {
+//     test.createOl('Вопрос ' + i, 'qestion' + i);
+//     for (var j = 1; j < 4; j++) {
+//         test.createAnsver('Вариант ' + j, '.qestion' + i);
+//     }
+// };
+
+test.createButton();
+
+</script>
+    
+</body>
+</html>
+
+
